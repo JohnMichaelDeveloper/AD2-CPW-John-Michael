@@ -1,47 +1,69 @@
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
-  
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PakiMemo | html5</title>
-  <link rel="stylesheet" href="/AD2-CPW/src/style.css">
+  <link rel="stylesheet" href="/src/style.css">
 </head>
 
 <body>
   <!-- Cabeçalho -->
-  <header>     
-      <img class="imgLogo" src="/img/PakiLogoTopo.png"  alt="">
-      <p class="ender"><i>Rua do Paço do Elefantinho, 123<br> Tel:(21) 4321-5678<br> contato@paquiderme.com.br</i></p>            
-   </header>
-   <!-- Navbar lado esquerdo -->
-  <nav>      
+  <header>
+    <img class="imgLogo" src="/img/PakiLogoTopo.png" alt="">
+    <p class="ender"><i>Rua do Paço do Elefantinho, 123<br> Tel:(21) 4321-5678<br> contato@paquiderme.com.br</i></p>
+  </header>
+  <!-- Navbar lado esquerdo -->
+  <nav>
     <ul>
-      <li><a href="/AD2-CPW/PakiMemo.html">INICIAL</a></li>
-      <li><a href="/AD2-CPW/Memorias.html">MEMÓRIAS</a></li>
-      <li><a href="/AD2-CPW/Discos.html">HDs / SSDs</a></li>
-      <li><a href="/AD2-CPW/Cadastro.html">CADASTRO</a></li>
-      <li><a href="/AD2-CPW/Compras.html">COMPRAS</a></li>
-    </ul> 
+      <li><a href="/PakiMemo.html">INICIAL</a></li>
+      <li><a href="/Memorias.html">MEMÓRIAS</a></li>
+      <li><a href="/Discos.html">HDs / SSDs</a></li>
+      <li><a href="/Cadastro.html">CADASTRO</a></li>
+      <li><a href="/Compras.html">COMPRAS</a></li>
+    </ul>
   </nav>
   <!-- Seção lado direito -->
-  <section>
+  <section name="secao">
     <h2 class="Titulo">Memórias</h2>
-    
-      <div class="listaMemo">        
-        <li><a href="" class="">DDR3 Kingston 4Gb</a></li>
-            <li>Samsung 8Gb - <b class="preco">R$ 190,00</b></li>
-          </ul>
-        <li>DDR4</li>
-          <ul>
-            <li>Kingston Fury 8Gb - <b class="preco">R$ 298,00</b></li>
-            <li>Corsair Vengeance 8Gb - <b class="preco">R$ 245,00</b></li>
-          </ul>
+    <div class="listaMemo" id="memoria">
+      <ol>
+        <li><a href="/memórias/ddr3Kingston.html" id="ddr3K" class="">DDR3 Kingston 4Gb</a></li>
+        <li><a href="/memórias/ddr3Samsung.html" id="ddr3S" class="">DDR3 Samsung 8Gb</a></li>
+        <li><a href="javascript:;" onclick="Mudarestado('minhaDiv')" id="ddr4K" class="">DDR4 Kingston Fury 8Gb</a></li>
+        <li><a href="/memórias/ddr4Corsair.html" id="ddr4C" class="">DDR4 Corsair Vengeance 8Gb</a></li>
+      </ol>
+    </div>
+
+    <div class="modal" id="minhaDiv">
+      <div class="modal-content janInfoDetalhe">
+
+        <div class="modal-body">
+          <h2 class="Titulo">Tipo DDR4</h2>
+          <img class="img" src="/img/SSD_Kingston_M2_5000Gb_70.jpg" alt="" />
+          <div class="grid">
+            <legend class="">Fabricante:</legend>
+            <legend>kingston M2</legend>
+
+            <legend class="">Capacidade:</legend>
+            <legend>8 Gb</legend>
+
+            <legend>Preço:</legend>
+            <legend>R$ 245,00</legend>
+          </div>
+
         </div>
-    
+        <div class="modal-footer">
+          <button onclick="Mudarestado('minhaDiv')">Fechar</button>
+        </div>
+      </div>
+    </div>   
+
+
   </section>
+  <script src="/src/script.js" defer></script>
 </body>
+
 </html>
