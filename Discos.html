@@ -41,53 +41,45 @@
         <tr>
           <td class="linTH">Tipo/Interface</td>
           <td class="linTH">Fabricante</td>
-          <td class="linTH">Capacidade</td>
-          <td class="linTH">Foto</td>
-          <td class="linTH">Preço</td>
-        </tr>        
-
-        <tr>
-          <td class="colTH" rowspan="2">HD Sata III</td>
-          <td>Western Digital</td>
-          <td>500 Gb</td>
-          <td class="imgDisco"><img src="img/HD_WD_500gb_70.jpg" alt=""></td>
-          <td class="preco">R$ 170,00</td>
+          <td class="linTH">Descrição</td>          
         </tr>
         <tr>
-          <td>Seagate</td>
-          <td>1 Tb</td>
-          <td class="imgDisco"><img src="img/HD_Seagate_1Tb_70.jpg" alt=""></td>
-          <td class="preco">R$ 350,00</td>
-          
+          <td class="colTH" rowspan="2">HD Sata III</td>
+          <td class="colMenu"><a href="javascript:void(0)" onclick="westernDigital()" id="wed" >Western Digital</a></td>
+          <td id="colTH"  class="" rowspan="6">         
+            <h3 id="titDes"></h3>         
+            <div id="imgDes" alt=""></div>
+            <div id="prcDes">
+              <p class="" id="int"></p>
+              <p class="" id="cap"></p>
+              <p class="" id="pre"></p>
+            </div>
+          </td>   
+        </tr>
+        <tr>
+          <td class="colMenu"><a href="javascript:void(0)" onclick="seagate()">Seagate</a></td>
         </tr>
         <tr>
           <td class="colTH" rowspan="2">SSD Sata III</td>
-          <td>Samdisk</td>
-          <td>480 gb</td>
-          <td class="imgDisco"><img src="img/SSD_Samdisk_480Gb_70.jpg" alt=""></td>
-          <td class="preco">R$ 380,00</td>
+          <td class="colMenu"><a href="javascript:void(0)" onclick="samdisk()">Samdisk</a></td>
+                  
         </tr>
         <tr>
-          <td>Kingston</td>
-          <td>980 gb</td>
-          <td class="imgDisco"><img src="img/SSD_Kingston_960Gb_70.jpg" alt=""></td>
-          <td class="preco">R$ 700,00</td>          
+          <td class="colMenu"><a href="javascript:void(0)" onclick="kingston960()">Kingston</a></td>                  
+          
         </tr>
         <tr>
           <td class="colTH" rowspan="2">SSD M2</td>
-          <td>Kingston</td>
-          <td>500 Gb</td>
-          <td class="imgDisco"><img src="img/SSD_Kingston_M2_5000Gb_70.jpg" alt=""></td>
-          <td class="preco">R$ 410,00</td>
+          <td class="colMenu"><a href="javascript:void(0)" onclick="kingston500()">Kingston</a></td>         
+            
         </tr>
         <tr>
-          <td>Western Digital</td>
-          <td>240 Gb</td>
-          <td class="imgDisco"><img src="img/SSD_WD_M2_240Gb_70.jpg" alt=""></td>
-          <td class="preco">R$ 270,00</td>          
+          <td class="colMenu"><a href="javascript:void(0)" onclick="wD240()">Western Digital</a></td>                   
+            
         </tr>
       </tbody>
-    </table>    
+    </table> 
   </section>
+  <script type="text/javascript" src="/src/script.js"></script>
 </body>
 </html>

@@ -158,6 +158,19 @@ th {
   text-align: center;
   font-size: 16px;
 }
+.tabDisco .colMenu{
+  height: 45px;
+}
+.tabDisco a, a:hover{
+  color: #005599;
+}
+.tabDisco span{
+  color: red;
+  font-weight: bold;
+}
+.tabDisco div p{
+  font-family: "Rubik", Verdana, sans-serif;
+}
 
 .linTH {
   color: #ffffff;
@@ -176,6 +189,34 @@ th {
   width: 70px;
   height: 70px;
 }
+#titDes{
+  height: 60px;
+  text-align: center;
+}
+#prcDes{
+  height: 100px;
+}
+.tabDisco #imgDes{
+  width: 100px;
+  height: 100px;
+  border: 2px solid #226699;
+  padding: 12px;
+  background-color: white;
+  margin: 0 5px;
+}
+
+#ativ{
+  display: none;
+}
+
+#tRed{
+  color:red;
+}
+.imgPrd{
+  width: 100px;
+  height: 100px;
+}
+
 
 /*---------------- Cadastro ----------------- */
 
@@ -434,3 +475,40 @@ input[type="radio" i] {
 .modal-body, .modal-footer{
   padding: 10px;
 }
+div{
+  /* margin: 0; */
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+div.container {
+  height: 100%;
+  background: -webkit-linear-gradient(top, #088fad 20%, #00d5ff 100%);
+}
+
+div.titulo {
+  font-size: 5vw;
+  background-color: blue;
+  text-align: center;
+  padding: 3vw;
+  position: relative;
+}
+
+div.op1 {
+  float: left;
+  font-size: 3vw;
+  text-align: center;
+  width: 21%;
+}
+
+div.op2 {
+  width: 46%;
+  margin-right: 0vw;
+  font-size: 3vw;
+  text-align: center;
+  min-width: 39vw;
+  float: right;
+}
+.clean{clear:both;}
