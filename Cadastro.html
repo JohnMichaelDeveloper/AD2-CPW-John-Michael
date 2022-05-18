@@ -1,120 +1,144 @@
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
-  
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PakiMemo | html5</title>
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="src/style.css">
-    <style>
-      #linhaEnder{
-        height: 50px;
-      }
-      #inpEnder{
-        width: 394px;
-        height: 80px;
-      }
-    </style>
-  </head>
 
-  <body>
-    <!-- Cabeçalho -->
-    <header>     
-        <img class="imgLogo" src="/img/PakiLogoTopo.png"  alt="">
-        <p class="ender"><i>Rua do Paço do Elefantinho, 123<br> Tel:(21) 4321-5678<br> contato@paquiderme.com.br</i></p>            
-    </header>
-    <!-- Navbar lado esquerdo -->
-    <nav>      
-      <ul>
-        <li><a href="/PakiMemo.html">INICIAL</a></li>
-        <li><a href="/Memorias.html">MEMÓRIAS</a></li>
-        <li><a href="/Discos.html">HDs / SSDs</a></li>
-        <li><a href="/Cadastro.html">CADASTRO</a></li>
-        <li><a href="/Compras.html">COMPRAS</a></li>
-      </ul> 
-    </nav>
-    <!-- Seção lado direito -->
-    <section>    
-      <form class="FormBox" action="">
-        <p class="title">Cadastro</p>  
-        <!-- Identificação -->
-        <fieldset class="FSLinhaInteira fieldset ">
-          <legend>Identificação</legend>
-          <div class="LinhaForm FSLinaInteira" >          
-            <label for="email" class="">E-mail:</label>
-            <input type="text" id="email" class="InpBoxGnd style" name="email" required>
-          </div>
-          <div class="LinhaForm FSLinhaInteira ColEsq">
-            <label for="senha" class="">Senha:</label>
-            <input type="password" id="senha" class="InpBoxMed style ajust-input" name="senha" required>
-          </div>
-          <div class="LinhaForm FSLinhaInteira ColDir">
-            <label for="confirme" class="">Confirme:</label>
-            <input type="password" id="confirme senha" class="InpBoxMed style" name="confirme" required>
-          </div>  
-        
-        </fieldset>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PakiMemo | html5</title>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="src/style.css">
+  <style>
+    #linhaEnder {
+      height: 50px;
+    }
 
-        <!-- Dados Pessoais -->
-        <fieldset class="FSLinhaInteira fieldset">      
-            <legend>Dados Pessoais</legend>
-            <div  class="LinhaForm FSLinaInteira">
-              <label for="" class="LinhaForm">Nome:</label>
-              <input type="text" class="InpBoxGnd style" required>
-            </div>
-            <div class="LinhaForm">
-              <label for="endereco" class="">Endereço:</label>
-              <textarea  name="endereco"  id="linhaEnder" class="LinhaForm InpBoxGnd" cols="52" rows="10" required></textarea>
-            </div>
-            <div class="LinhaForm FSLinaInteira ColEsq">
-              <label for="phone" class="">Telefone:</label>
-              <input type="tel" id="phone" name="phone" pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}" placeholder="11-3565-0000"  class="InpBoxMed style ajust-input">
-            </div>
-            <div class="LinhaForm FSLinaInteira ColDir">
-              <label for="celular" class="">Celular:</label>          
-              <input type="tel" id="Celular" name="celular" pattern="[0-9]{2} [0-9]{5}-[0-9]{4}" placeholder="11-99999-9999" class="InpBoxMed style">
-            </div>
+    #inpEnder {
+      width: 394px;
+      height: 80px;
+    }
+  </style>
+</head>
 
-            <!-- Nascimento -->          
-            <fieldset class="FSLinhaInteira FSColEsq fieldset">
-              <legend>Nascimento</legend>            
-              <input type="number" id="" name="dia" min="01" max="31" required class="numDD style">            
-              <label for="">/</label>
-              <input type="number" id="" name="mes" min="01" max="12" required class="numDD style">
-              <label for="">/</label>
-              <input type="number" id="" name="ano" min="1000" max="2999" required  value="1980" class="numQD style">
-            </fieldset>
-          
-
-            <!-- Genero -->
-           
-              <fieldset class="FSLinhaInteira FSColDir fieldset">
-                <legend>Sexo</legend>
-                <div class="">
-                  <input type="radio" class="radio" name="sexo" id="Mas" value="Masculino">
-                  <label for="" class="">Mas</label>
-                  <input type="radio" class="radio" name="sexo" id="Fem" value="Feminino">
-                  <label for="" class="">Fem</label>
-                  <input type="radio" class="radio" checked name="sexo" id="Outro" value="Outros">
-                  <label for="" class="">Outro</label>
-                </div>
-              </fieldset>
-          
-
-        </fieldset>
-
-        <!-- Buttons -->
-        <div class="botoes">
-          <input type="submit" class="btn-cadastro" alt="Cadastrar" value="Cadastrar">
-          <input type="reset" class="btn-cadastro" alt="Limpar" value="Limpar">
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <img class="imgLogo" src="/img/PakiLogoTopo.png" alt="">
+    <p class="ender"><i>Rua do Paço do Elefantinho, 123<br> Tel:(21) 4321-5678<br> contato@paquiderme.com.br</i></p>
+  </header>
+  <!-- Navbar lado esquerdo -->
+  <nav>
+    <ul>
+      <li><a href="/PakiMemo.html">INICIAL</a></li>
+      <li><a href="/Memorias.html">MEMÓRIAS</a></li>
+      <li><a href="/Discos.html">HDs / SSDs</a></li>
+      <li><a href="/Cadastro.html">CADASTRO</a></li>
+      <li><a href="/Compras.html">COMPRAS</a></li>
+    </ul>
+  </nav>
+  <!-- Seção lado direito -->
+  <section>
+    <form class="FormBox" action="">
+      <p class="title">Cadastro</p>
+      <!-- Identificação -->
+      <fieldset class="FSLinhaInteira fieldset ">
+        <legend>Identificação</legend>
+        <div class="LinhaForm FSLinaInteira">
+          <label for="email" class="">E-mail:</label>
+          <input type="text" id="email" class="InpBoxGnd style" name="email" required>
+        </div>
+        <div class="LinhaForm FSLinhaInteira ColEsq">
+          <label for="senha" class="">Senha:</label>
+          <input type="password" id="senha" class="InpBoxMed style ajust-input" name="senha" required>
+        </div>
+        <div class="LinhaForm FSLinhaInteira ColDir">
+          <label for="confirme" class="">Confirme:</label>
+          <input type="password" id="confirme senha" class="InpBoxMed style" name="confirme" required>
         </div>
 
-      </form>
-    </section>
-    
-  </body>
+      </fieldset>
+
+      <!-- Dados Pessoais -->
+      <fieldset class="FSLinhaInteira fieldset">
+        <legend>Dados Pessoais</legend>
+        <div class="LinhaForm FSLinaInteira">
+          <label for="" class="LinhaForm">Nome:</label>
+          <input type="text" class="InpBoxGnd style" required>
+        </div>
+        <div class="LinhaForm">
+          <label for="endereco" class="">Endereço:</label>
+          <textarea name="endereco" id="linhaEnder" class="LinhaForm InpBoxGnd" cols="52" rows="10" required></textarea>
+        </div>
+        <div class="LinhaForm FSLinaInteira ColEsq">
+          <label for="phone" class="">Telefone:</label>
+          <input type="tel" id="phone" name="phone" pattern="\d*" placeholder="" class="InpBoxMed style ajust-input"
+            title="Digite apenas números">
+        </div>
+        <div class="LinhaForm FSLinaInteira ColDir">
+          <label for="cell" class="">Celular:</label>
+          <input type="tel" id="cell" name="cell" pattern="\d*" placeholder="" class="InpBoxMed style"
+            title="Digite apenas números">
+        </div>
+
+        <!-- Nascimento -->
+        <fieldset class="FSLinhaInteira FSColEsq fieldset">
+          <legend>Nascimento</legend>
+          <input type="number" id="" name="dia" min="01" max="31" required class="numDD style">
+          <label for="">/</label>
+          <input type="number" id="" name="mes" min="01" max="12" required class="numDD style">
+          <label for="">/</label>
+          <input type="number" id="" name="ano" min="1000" max="2999" required value="1980" class="numQD style">
+        </fieldset>
+
+
+        <!-- Genero -->
+
+        <fieldset class="FSLinhaInteira FSColDir fieldset">
+          <legend>Sexo</legend>
+          <div class="">
+            <input type="radio" class="radio" name="sexo" id="Mas" value="Masculino">
+            <label for="" class="">Mas</label>
+            <input type="radio" class="radio" name="sexo" id="Fem" value="Feminino">
+            <label for="" class="">Fem</label>
+            <input type="radio" class="radio" checked name="sexo" id="Outro" value="Outros">
+            <label for="" class="">Outro</label>
+          </div>
+        </fieldset>
+
+
+      </fieldset>
+
+      <!-- Buttons -->
+      <div class="botoes">
+        <input type="submit" class="btn-cadastro" alt="Cadastrar" value="Cadastrar">
+        <input type="reset" class="btn-cadastro" alt="Limpar" value="Limpar">
+      </div>
+
+    </form>
+  </section>
+  <script>
+    document.getElementById('phone').onblur = function () {
+      validaTel(this);
+    };
+    document.getElementById('cell').onblur = function () {
+      validaCel(this);
+    };
+
+    function validaTel(el) {     
+        if (el.value.length < 8) {
+          alert("Telefone tem de ter 8 dígitos!");
+        } else if (el.value.length > 8) {
+          alert("Telefone só pode ter 8 dígitos");
+        } 
+    }
+    function validaCel(el) {
+      if (el.value.length < 9) {
+        alert("Celular tem de ter 9 dígitos!");
+      } else if (el.value.length > 9) {
+        alert("Celular só pode ter 9 dígitos");
+      }
+    }
+  </script>
+</body>
+
 </html>

@@ -23,22 +23,18 @@ Polo São Gonçalo - Periodo 2022.01
   <!-- CSS -->
   <style>
     #loginCad {
-      /* modificação ColEsq */
       width: 260px;
     }
 
     #idEmail {
-      /* InpBoxGnd */
       width: 160px;
     }
 
     #senhaCad {
-      /* ColDir */
       width: 180px;
     }
 
     #liSelProd {
-      /* ColEsq */
       width: 370px;
     }
 
@@ -46,13 +42,11 @@ Polo São Gonçalo - Periodo 2022.01
       width: 56%;
     }
 
-    #btnIncluir {
-      /* ColDir */
+    #btnIncluir {      
       width: 70px;
     }
 
-    #boxPedidos {
-      /* LinhaForm */
+    #boxPedidos {      
       height: 100px;
     }
 
@@ -61,27 +55,23 @@ Polo São Gonçalo - Periodo 2022.01
       width: 100%;
     }
 
-    #fsBandeira {
-      /* FSColDir */
+    #fsBandeira {     
       width: 80px;
       text-align: left;
     }
 
-    #numCartao {
-      /* ColEsq */
+    #numCartao {     
       height: 35px;
       width: 350px;
       padding-top: 10px;
     }
 
-    #valCartao {
-      /* ColEsq */
+    #valCartao {     
       height: 35px;
       width: 230px;
     }
 
-    #boxParcel {
-      /* ColEsq */
+    #boxParcel {      
       height: 30px;
       width: 230px;
     }
@@ -109,7 +99,9 @@ Polo São Gonçalo - Periodo 2022.01
   <!-- ---------------------------------------------- -->
   <!-- SECTION -->
   <section>
-    <form class="FormBox" action="">
+
+    <!-- Form começa aqui -->
+    <form class="FormBox" name="form" action="">
       <p class="title">Compras</p>
       <!-- ---------------------------------------------- -->
       <!-- Identificação -->
@@ -117,7 +109,7 @@ Polo São Gonçalo - Periodo 2022.01
         <legend>Identificação</legend>
         <div id="loginCad idEmail" class="LinhaForm">
 
-          <label for="" class="LabBox" >E-mail:</label>
+          <label for="" class="LabBox">E-mail:</label>
           <input type="text" class=" style" id="idEmail">
 
           <div class="FSLinhaInteira ColDir" id="senhaCad">
@@ -137,54 +129,46 @@ Polo São Gonçalo - Periodo 2022.01
       <!-- Lista de compras -->
       <fieldset class="FSLinhaInteira fieldset" id=" lisPedArea">
         <legend>Lista de Compras</legend>
-        
-          <div class="LinhaForm FSLinaInteira">
-            <label for="" class="LabBox ColEsq">Produtos:</label>           
-            <div id="lisSelProd">
-              <select id="selProduto" class="ColEsq compras" readonly="readonly">
-                <option selected="">------</option>
-                <optgroup label="Memória DDR3">
-                  <option>Kingston 4Gb</option>
-                  <option>Samsung 8Gb</option>
-                </optgroup>
-                <optgroup label="Memória DDR4">
-                  <option>Kingston Fury 8Gb</option>
-                  <option>Corsair Vengeance 8Gb</option>
-                </optgroup>
-                <optgroup label="HD Sata III">
-                  <option>Western Digital 500 Gb</option>
-                  <option>Seagate 1 Tb</option>
-                </optgroup>
-                <optgroup label="SSD M2">
-                  <option>Kingston 500 Gb</option>
-                  <option>Western Digital 240 Gb</option>
-                </optgroup>
-              </select>
-            </div>
-            <input type="button" class="btn-cadastro ColDir" id="btnIncluir" value="Incluir">
-          </div>
-         
-        
 
+        <div class="LinhaForm FSLinaInteira">
+          <label for="" class="LabBox ColEsq">Produtos:</label>
+          <div id="lisSelProd">
+            <select id="selProduto" name="select" class="ColEsq compras" readonly="readonly">
+              <option selected="" value="0">------</option>
+              <optgroup label="Memória DDR3">
+                <option value="200">Kingston 4Gb</option>
+                <option value="240">Samsung 8Gb</option>
+              </optgroup>
+              <optgroup label="Memória DDR4">
+                <option value="235">Kingston Fury 8Gb</option>
+                <option value="245">Corsair Vengeance 8Gb</option>
+              </optgroup>
+              <optgroup label="HD Sata III">
+                <option value="410">Western Digital 500 Gb</option>
+                <option value="350">Seagate 1 Tb</option>
+              </optgroup>
+              <optgroup label="SSD M2">
+                <option value="410">Kingston 500 Gb</option>
+                <option value="270">Western Digital 240 Gb</option>
+              </optgroup>
+            </select>
+          </div>
+          <input type="button" class="btn-cadastro ColDir" id="btnIncluir" name="add" onclick="AdicionaSelect()"
+            value="Incluir">
+        </div>
         <!-- </div> -->
         <div class="LinhaForm linhaAjst" id="boxPedidos">
-          <textarea class="LinhaForm" id="lisPedArea" cols="62" rows="4"></textarea>
+          <textarea class="LinhaForm" name="txtarea" id="lisPedArea" cols="62" rows="4"></textarea>
         </div>
         <div class="LinhaForm ColDir">
           <label for="" class="LabBox">Valor: R$</label>
-          <input type="text" class="InpBoxMed style " readonly="readonly">
+          <input type="text" name="apagar" class="InpBoxMed style " readonly="readonly">
         </div>
-
       </fieldset>
-
-
       <fieldset class="fieldset FSLinhaInteira">
         <legend>Dados do Cartão</legend>
         <div class="row">
           <div>
-
-
-
             <div class="ColEsq" id="numCartao">
               <label for="" class="LabBox">Número</label>
               <input type="text" id="1" name="1" min="01" max="31" required="" class=" numDD style">
@@ -192,9 +176,6 @@ Polo São Gonçalo - Periodo 2022.01
               <input type="text" id="3" name="3" min="01" max="31" required="" class=" numDD style">
               <input type="text" id="4" name="4" min="01" max="31" required="" class=" numDD style">
             </div>
-
-
-
 
             <div class="ColEsq" id="valCartao">
               <label for="" class="LabBox">Validade</label>
@@ -242,83 +223,38 @@ Polo São Gonçalo - Periodo 2022.01
         <input type="reset" class="btn-cadastro" alt="Limpar" value="Limpar">
       </div>
     </form>
+  
   </section>
-  <!-- Code injected by live-server -->
-  <script type="text/javascript">
-    // <![CDATA[  <-- For SVG support
-    if ('WebSocket' in window) {
-      (function () {
-        function refreshCSS() {
-          var sheets = [].slice.call(document.getElementsByTagName("link"));
-          var head = document.getElementsByTagName("head")[0];
-          for (var i = 0; i < sheets.length; ++i) {
-            var elem = sheets[i];
-            var parent = elem.parentElement || head;
-            parent.removeChild(elem);
-            var rel = elem.rel;
-            if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-              var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-              elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-            }
-            parent.appendChild(elem);
-          }
-        }
-        var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-        var address = protocol + window.location.host + window.location.pathname + '/ws';
-        var socket = new WebSocket(address);
-        socket.onmessage = function (msg) {
-          if (msg.data == 'reload') window.location.reload();
-          else if (msg.data == 'refreshcss') refreshCSS();
-        };
-        if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-          console.log('Live reload enabled.');
-          sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-        }
-      })();
-    }
-    else {
-      console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-    }
-	// ]]>
-  </script>
+  
+  <script>
+    function AdicionaSelect() {
+      var i = document.form.select.selectedIndex;
+      var j = document.form.txtarea.value;
+      var k = document.form.apagar.value;
+          
+       
+      if ((i >= 1) & (i < 3)) {
+        j += 'Memória DDR3 ' + document.form.select[i].text;
+        document.form.txtarea.value = j + '\n';         
+        document.form.apagar.value =  240;        
 
-  <!-- Code injected by live-server -->
-  <script type="text/javascript">
-    // <![CDATA[  <-- For SVG support
-    if ('WebSocket' in window) {
-      (function () {
-        function refreshCSS() {
-          var sheets = [].slice.call(document.getElementsByTagName("link"));
-          var head = document.getElementsByTagName("head")[0];
-          for (var i = 0; i < sheets.length; ++i) {
-            var elem = sheets[i];
-            var parent = elem.parentElement || head;
-            parent.removeChild(elem);
-            var rel = elem.rel;
-            if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-              var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-              elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-            }
-            parent.appendChild(elem);
-          }
-        }
-        var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-        var address = protocol + window.location.host + window.location.pathname + '/ws';
-        var socket = new WebSocket(address);
-        socket.onmessage = function (msg) {
-          if (msg.data == 'reload') window.location.reload();
-          else if (msg.data == 'refreshcss') refreshCSS();
-        };
-        if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-          console.log('Live reload enabled.');
-          sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-        }
-      })();
+      } else if ((i > 2) & (i < 5)) {
+        j += 'Memória DDR4 ' + document.form.select[i].text;
+        document.form.txtarea.value = j + '\n'
+        document.form.apagar.value =  350; 
+      } else if ((i > 4) & (i < 7)) {
+        j += 'HD Sata III ' + document.form.select[i].text;
+        document.form.txtarea.value = j + '\n'
+        document.form.apagar.value =  640; 
+      } else if ((i > 6) & (i < 9)) {
+        j += 'SSD M2 ' + document.form.select[i].text;
+        document.form.txtarea.value = j + '\n'
+        document.form.apagar.value =  700; 
+      } else if (i < 1) {
+        alert("Nenhum Produto selecionado!");
+      }
     }
-    else {
-      console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-    }
-	// ]]>
+
   </script>
 
 </body>

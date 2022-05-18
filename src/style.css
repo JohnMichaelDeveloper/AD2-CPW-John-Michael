@@ -9,13 +9,6 @@ Polo São Gonçalo - Periodo 2022.01
 
 @import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
 
-/*----------- Variaveis ----------- */
-:root {
-  /* Fontes */
-  --sourcesLora: "Lora", Georgia, serif;
-  --sourcesRubik: "Rubik", sans-serif;
-}
-/*--------------------------------- */
 
 /*----------- Corrigindo código ----------- */
 body {
@@ -40,6 +33,7 @@ section {
   display: block;
   width: 70%;
   float: right;
+  
 }
 
 .ender {
@@ -54,7 +48,7 @@ section {
   border-bottom: 3px solid;
   margin-bottom: 4px;
   padding-bottom: 5px;
-  /* display:flex; */
+ 
 }
 
 .apres {
@@ -62,10 +56,7 @@ section {
   font-size: 18px;
 }
 
-nav {
-  /* display: block;
-  width: 18%;
-  float: left; */
+nav {  
   margin-right: 10px;
   font-family: "Rubik", Verdana, sans-serif;
 }
@@ -75,7 +66,7 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+nav a:hover {
   color: #dddd22;
 }
 
@@ -217,7 +208,6 @@ th {
   height: 100px;
 }
 
-
 /*---------------- Cadastro ----------------- */
 
 .FormBox {
@@ -277,9 +267,6 @@ th {
   margin: 20px 10px 0px 10px;
 }
 
-/*-------------- Fim do Código corrigido ------------------- */
-
-/* ------------ Cadastro/Compras --------------- */
 
 .title {
   font-size: 20px;
@@ -289,7 +276,7 @@ th {
   width: 384px;
   float: right;
   display: block;
-  /* border: 1px solid #abc7c7; */
+  
 }
 
 .InpBoxMed {
@@ -386,11 +373,6 @@ input[type="radio" i] {
 
 /* ------------ compras --------------- */
 
-/* .section {
-  width: 56%;
-  margin: 0px -60%;
-} */
-
 .style {
   border: 2px solid #abc7c7;
   border-radius: 5px;
@@ -401,20 +383,7 @@ input[type="radio" i] {
   border: 2px solid #abc7c7;
   border-radius: 5px;
   height: 29px;
-} /*
-.bandeira {
-  width: 80px !important;
-  height: 100%;
 }
-.textArea {
-  width: 473px !important;
-}
-.cadastrarSe {
-  padding: 10px;
-  margin-top: 10px;
-} */
-
-/* ------------- Dados do Cartão ------------ */
 
 .div-inline-block {
   display: inline-block;
@@ -442,8 +411,6 @@ input[type="radio" i] {
   margin-top: 10px;
 }
 
-
-
 /* ------------- Modal --------------- */
 
 .modal{ 
@@ -452,7 +419,8 @@ input[type="radio" i] {
   left: 0;
   width: 100%;
   height: 100%;
-  display: none;
+  
+  
 }
 .img{
   position: relative;
@@ -463,14 +431,15 @@ input[type="radio" i] {
   object-position: center;
 }
 .modal-content{
-  margin: 0 auto;
-  margin-top: 5%;
+  margin: 0 auto;  
   margin-bottom: 5%;
-  max-width: 500px;
-  
+  max-width: 500px;  
   background-color: #116688;
   box-shadow: 0 0 2px #fff;
   padding: 0px;
+  position: absolute;
+  top: 120px;
+  left: 278px;
 }
 .modal-body, .modal-footer{
   padding: 10px;

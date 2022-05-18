@@ -30,42 +30,54 @@
     <h2 class="Titulo">Memórias</h2>
     <div class="listaMemo" id="memoria">
       <ol>
-        <li><a href="/memórias/ddr3Kingston.html" id="ddr3K" class="">DDR3 Kingston 4Gb</a></li>
-        <li><a href="/memórias/ddr3Samsung.html" id="ddr3S" class="">DDR3 Samsung 8Gb</a></li>
+        <li><a href="" id="OnModal" class="">DDR3 Kingston 4Gb</a></li>
+        <li><a href="" id="ddr3S" class="">DDR3 Samsung 8Gb</a></li>
         <li><a href="javascript:;" onclick="Mudarestado('minhaDiv')" id="ddr4K" class="">DDR4 Kingston Fury 8Gb</a></li>
         <li><a href="/memórias/ddr4Corsair.html" id="ddr4C" class="">DDR4 Corsair Vengeance 8Gb</a></li>
       </ol>
     </div>
 
-    <div class="modal" id="minhaDiv">
-      <div class="modal-content janInfoDetalhe">
 
-        <div class="modal-body">
-          <h2 class="Titulo">Tipo DDR4</h2>
-          <img class="img" src="/img/SSD_Kingston_M2_5000Gb_70.jpg" alt="" />
-          <div class="container">
-            <div class="op1">
-              <legend class="">Fabricante:</legend>
-              <legend class="">Capacidade:</legend>
-              <legend>Preço:</legend>   
+    <div class="modal-content janInfoDetalhe">
+      <thead>
+        <tr>
+          <th class="titulo" colspan="1">
+            <h3 id="titDes">Teste</h3>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td id="colTH" class="" rowspan="6">
+            <div id="imgDes" alt=""><img src="./img/SSD_Kingston_960Gb_70.jpg" alt=""></div>
+            <div id="prcDes">
+              <p class="" id="int">Informe</p>
+              <p class="" id="cap">Modelo</p>
+              <p class="" id="pre">Preço</p>
             </div>
-            <div class="op2">
-              <legend>kingston M2</legend>
-              <legend>8 Gb</legend>
-              <legend>R$ 245,00</legend>  
-            </div>           
-          </div>
-
-        </div>
-        <div class="modal-footer">
-          <button onclick="Mudarestado('minhaDiv')">Fechar</button>
-        </div>
+          </td>
+        </tr>
+      </tbody>
+      <div class="modal-footer">
+        <button onclick="Mudarestado('minhaDiv')">Fechar</button>
       </div>
-    </div>   
-
-
+    </div>
+    </div>
   </section>
   <script src="/src/script.js" defer></script>
+  <script>
+    var modalOpen = document.getElementById("OnModal");
+    modalOpen.addEventListener("click", function () {
+      var container = document.getElementById("minhaDiv");
+
+      if (container.style.display === "nome") {
+        container.style.display = "block";
+      } else {
+        container.style.display = "nome";
+      }
+
+    });
+  </script>
 </body>
 
 </html>
